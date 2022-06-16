@@ -78,7 +78,7 @@ def singularize(original_text: str) -> str:
     
     # Palavras terminadas em 'res' e com inflexão de volta ao 'r'
     # Ex: flores - flor, investidores - investidor
-    elif re.match(r"^([a-zA-z]*)(lo|do)res$", word_to_takeoff_plural) :
+    elif re.match(r"^([a-zA-z]*)(to|lo|do)res$", word_to_takeoff_plural) :
         #print(word_to_takeoff_plural)
         word_without_plural = re.sub(r"^([a-zA-z]*)(to|lo|do)res$",r"\1\2r",word_to_takeoff_plural)
         return word_without_plural
